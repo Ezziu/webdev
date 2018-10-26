@@ -1,0 +1,46 @@
+
+
+h2,p  {
+	color: red;
+	font-size: 36px;
+	text-align: center;
+	border-bottom: 5px solid red;
+	font-family: 'Dosis', sans-serif;
+}
+
+p {
+	color: blanchedalmond;
+	text-transform: full-width;
+	font-size: 24px;	
+	line-height: inherit;
+
+}
+
+ul {
+	background-color: blueviolet; 
+	opacity: 0.5;
+}
+
+li {opacity: 1;
+	color: white;
+	font-style: strong;
+}
+				
+
+}
+a:visited {
+	color: blanchedalmond;
+}
+
+.tlo{
+	background-image: url("tlo.jpg");
+	background-size: cover;
+}	
+
+.licklolling {
+	background-image: url("rl.png");
+}
+
+.licklolling2 {
+	background-image: url("rl2.png");
+}

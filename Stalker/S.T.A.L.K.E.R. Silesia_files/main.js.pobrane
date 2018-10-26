@@ -1,0 +1,52 @@
+function cycleImages(){
+  var $active = $('#cycler .active');
+  var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
+  $next.css('z-index',2);//move the next image up the pile
+  $active.fadeOut(1500,function(){//fade out the top image
+$active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+      $next.css('z-index',3).addClass('active');//make the next image the top one
+  });
+}
+
+$(document).ready(() => {
+  setInterval('cycleImages()', 7000);
+
+  const $menuImprezaButton = $('.buttonImpreza');
+  const $navImprezaDropdown = $('#impreza_menu');
+  const $menuGraTerenowaButton = $('.buttonGraTerenowa');
+  const $navGraTerenowaDropdown = $('#gra_terenowa_menu');
+  const $menuRejestracjaButton = $('.buttonRejestracja');
+  const $navRejestracjaDropdown = $('#rejestracja_menu');
+  //const $slider = $('.slider').bbslider({
+    //auto:  true,
+    //timer: 3000,
+    //loop:  true
+//});
+
+/*  $navGraTerenowaDropdown.hide();
+  $navRejestracjaDropdown.hide();
+*/
+  $menuImprezaButton.on('click', () => {
+    $navImprezaDropdown.slideToggle();
+  })
+  
+  $menuGraTerenowaButton.on('click', () => {
+    $navGraTerenowaDropdown.slideToggle();
+  })
+
+  $menuRejestracjaButton.on('click', () => {
+    $navRejestracjaDropdown.slideToggle();
+  })
+
+  /*$navImprezaDropdown.on('mouseleave', () => {
+    $navImprezaDropdown.slideToggle();
+  })
+
+  $navGraTerenowaDropdown.on('mouseleave', () => {
+    $navGraTerenowaDropdown.slideToggle();
+  })
+
+  $navRejestracjaDropdown.on('mouseleave', () => {
+    $navRejestracjaDropdown.slideToggle();
+  })*/
+})
